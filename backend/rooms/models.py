@@ -39,5 +39,5 @@ class Gallery(models.Model):
     image =  models.ImageField(upload_to='g_imges')
     
 class RoomImage(models.Model):
-    room_type=models.ForeignKey(RoomType, on_delete=models.CASCADE,null=True)
+    room_type=models.ForeignKey(RoomType, on_delete=models.CASCADE,null=True,related_name='room_type_imags')
     image =  models.ImageField(upload_to='room_type_imgs/')
